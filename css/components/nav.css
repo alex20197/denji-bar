@@ -103,6 +103,7 @@
 /* ── Burger button ── */
 .nav__burger {
     display: none;
+    margin-left: auto;
     flex-direction: column;
     justify-content: center;
     align-items: center;
