@@ -10,8 +10,15 @@ import { initScrollProgress }      from './modules/scroll-progress.js';
 import { initRipple }              from './modules/ripple.js';
 import { initBurger }              from './modules/burger.js';
 import { initChainsawVisibility }  from './modules/chainsaw-visibility.js';
+import { initFlipCard }            from './modules/flip-card.js';
 
 const init = () => {
+    // Prevent browser from restoring scroll position on reload
+    if (history.scrollRestoration) {
+        history.scrollRestoration = 'manual';
+    }
+    window.scrollTo(0, 0);
+
     initScrollReveal();
     initNavScroll();
     initChainsawVibration();
@@ -21,8 +28,9 @@ const init = () => {
     initRipple();
     initBurger();
     initChainsawVisibility();
+    initFlipCard();
 
-    // Page-load fade-in
+    // Page-load fade-in (must be last)
     document.body.classList.add('is-loaded');
 };
 

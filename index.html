@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="uk">
+<html lang="uk" class="no-js">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -46,6 +46,7 @@
     <link rel="stylesheet" href="css/components/hero.css">
     <link rel="stylesheet" href="css/components/about.css">
     <link rel="stylesheet" href="css/components/menu.css">
+    <link rel="stylesheet" href="css/components/flip-card.css">
     <link rel="stylesheet" href="css/components/gallery.css">
     <link rel="stylesheet" href="css/components/contacts.css">
     <link rel="stylesheet" href="css/components/footer.css">
@@ -227,71 +228,139 @@
             </header>
 
             <div class="menu__grid">
-                <article class="menu-card reveal">
-                    <span class="menu-card__badge menu-card__badge--cocktail">Коктейль</span>
-                    <h3 class="menu-card__title">CHAINSAW BLOOD</h3>
-                    <p class="menu-card__jp">チェンソーブラッド</p>
-                    <p class="menu-card__desc">Апероль, кров'яний апельсин, гренадин, горілка преміум, лід у формі серця. Злегка гірко — як усі рішення Деньджі.</p>
-                    <footer class="menu-card__footer">
-                        <p class="menu-card__price">180 <span class="menu-card__price-unit">грн</span></p>
-                        <p class="menu-card__volume">200 мл</p>
-                    </footer>
-                </article>
 
-                <article class="menu-card reveal menu-card--delay-1">
-                    <span class="menu-card__badge menu-card__badge--special">Сігнатур</span>
-                    <h3 class="menu-card__title">POWER'S RUSH</h3>
-                    <p class="menu-card__jp">パワーズラッシュ</p>
-                    <p class="menu-card__desc">Джин, блакитний кюрасао, лимонний сік, малиновий сироп, тонік, малина. Хаотичний та яскравий — як сама Павер.</p>
-                    <footer class="menu-card__footer">
-                        <p class="menu-card__price">210 <span class="menu-card__price-unit">грн</span></p>
-                        <p class="menu-card__volume">220 мл</p>
-                    </footer>
-                </article>
+                <div class="flip-card reveal">
+                    <div class="flip-card__inner">
+                        <article class="menu-card flip-card__front">
+                            <span class="menu-card__badge menu-card__badge--cocktail">Коктейль</span>
+                            <h3 class="menu-card__title">CHAINSAW BLOOD</h3>
+                            <p class="menu-card__jp">チェンソーブラッド</p>
+                            <p class="menu-card__desc">Апероль, кров'яний апельсин, гренадин, горілка преміум, лід у формі серця. Злегка гірко — як усі рішення Деньджі.</p>
+                            <footer class="menu-card__footer">
+                                <p class="menu-card__price">180 <span class="menu-card__price-unit">грн</span></p>
+                                <p class="menu-card__volume">200 мл</p>
+                            </footer>
+                        </article>
+                        <div class="flip-card__back">
+                            <div class="flip-card__photo-placeholder">
+                                <span class="flip-card__icon">🍽️</span>
+                                <p class="flip-card__coming-soon">ФОТО НЕЗАБАРОМ</p>
+                            </div>
+                            <button class="flip-card__close" aria-label="Повернутись до опису">✕</button>
+                        </div>
+                    </div>
+                </div>
 
-                <article class="menu-card reveal menu-card--delay-2">
-                    <span class="menu-card__badge menu-card__badge--cocktail">Коктейль</span>
-                    <h3 class="menu-card__title">MAKIMA'S CONTROL</h3>
-                    <p class="menu-card__jp">マキマのコントロール</p>
-                    <p class="menu-card__desc">Саке, личі, трояндова вода, соляний обідок, суха крига. Виглядає м'яко — б'є без попередження.</p>
-                    <footer class="menu-card__footer">
-                        <p class="menu-card__price">240 <span class="menu-card__price-unit">грн</span></p>
-                        <p class="menu-card__volume">180 мл</p>
-                    </footer>
-                </article>
+                <div class="flip-card reveal menu-card--delay-1">
+                    <div class="flip-card__inner">
+                        <article class="menu-card flip-card__front">
+                            <span class="menu-card__badge menu-card__badge--special">Сігнатур</span>
+                            <h3 class="menu-card__title">POWER'S RUSH</h3>
+                            <p class="menu-card__jp">パワーズラッシュ</p>
+                            <p class="menu-card__desc">Джин, блакитний кюрасао, лимонний сік, малиновий сироп, тонік, малина. Хаотичний та яскравий — як сама Павер.</p>
+                            <footer class="menu-card__footer">
+                                <p class="menu-card__price">210 <span class="menu-card__price-unit">грн</span></p>
+                                <p class="menu-card__volume">220 мл</p>
+                            </footer>
+                        </article>
+                        <div class="flip-card__back">
+                            <div class="flip-card__photo-placeholder">
+                                <span class="flip-card__icon">🍽️</span>
+                                <p class="flip-card__coming-soon">ФОТО НЕЗАБАРОМ</p>
+                            </div>
+                            <button class="flip-card__close" aria-label="Повернутись до опису">✕</button>
+                        </div>
+                    </div>
+                </div>
 
-                <article class="menu-card reveal menu-card--delay-1">
-                    <span class="menu-card__badge menu-card__badge--food">Закуска</span>
-                    <h3 class="menu-card__title">ДЕНЬДЖІ БЕНТОУ</h3>
-                    <p class="menu-card__jp">デンジの弁当</p>
-                    <p class="menu-card__desc">Рибні котлети в паніровці, онігірі з лососем, маринований огірок, соус теріякі. Скромно та по-домашньому.</p>
-                    <footer class="menu-card__footer">
-                        <p class="menu-card__price">290 <span class="menu-card__price-unit">грн</span></p>
-                        <p class="menu-card__volume">Порція</p>
-                    </footer>
-                </article>
+                <div class="flip-card reveal menu-card--delay-2">
+                    <div class="flip-card__inner">
+                        <article class="menu-card flip-card__front">
+                            <span class="menu-card__badge menu-card__badge--cocktail">Коктейль</span>
+                            <h3 class="menu-card__title">MAKIMA'S CONTROL</h3>
+                            <p class="menu-card__jp">マキマのコントロール</p>
+                            <p class="menu-card__desc">Саке, личі, трояндова вода, соляний обідок, суха крига. Виглядає м'яко — б'є без попередження.</p>
+                            <footer class="menu-card__footer">
+                                <p class="menu-card__price">240 <span class="menu-card__price-unit">грн</span></p>
+                                <p class="menu-card__volume">180 мл</p>
+                            </footer>
+                        </article>
+                        <div class="flip-card__back">
+                            <div class="flip-card__photo-placeholder">
+                                <span class="flip-card__icon">🍽️</span>
+                                <p class="flip-card__coming-soon">ФОТО НЕЗАБАРОМ</p>
+                            </div>
+                            <button class="flip-card__close" aria-label="Повернутись до опису">✕</button>
+                        </div>
+                    </div>
+                </div>
 
-                <article class="menu-card reveal menu-card--delay-2">
-                    <span class="menu-card__badge menu-card__badge--food">Закуска</span>
-                    <h3 class="menu-card__title">М'ЯСО ХИМЕРИ</h3>
-                    <p class="menu-card__jp">キメラの肉</p>
-                    <p class="menu-card__desc">Гострі м'ясні слайдери зі смаженою цибулею та соусом sriracha. Три штуки — три укуси в саме серце.</p>
-                    <footer class="menu-card__footer">
-                        <p class="menu-card__price">320 <span class="menu-card__price-unit">грн</span></p>
-                        <p class="menu-card__volume">3 шт.</p>
-                    </footer>
-                </article>
+                <div class="flip-card reveal menu-card--delay-1">
+                    <div class="flip-card__inner">
+                        <article class="menu-card flip-card__front">
+                            <span class="menu-card__badge menu-card__badge--food">Закуска</span>
+                            <h3 class="menu-card__title">ДЕНЬДЖІ БЕНТОУ</h3>
+                            <p class="menu-card__jp">デンジの弁当</p>
+                            <p class="menu-card__desc">Рибні котлети в паніровці, онігірі з лососем, маринований огірок, соус теріякі. Скромно та по-домашньому.</p>
+                            <footer class="menu-card__footer">
+                                <p class="menu-card__price">290 <span class="menu-card__price-unit">грн</span></p>
+                                <p class="menu-card__volume">Порція</p>
+                            </footer>
+                        </article>
+                        <div class="flip-card__back">
+                            <div class="flip-card__photo-placeholder">
+                                <span class="flip-card__icon">🍽️</span>
+                                <p class="flip-card__coming-soon">ФОТО НЕЗАБАРОМ</p>
+                            </div>
+                            <button class="flip-card__close" aria-label="Повернутись до опису">✕</button>
+                        </div>
+                    </div>
+                </div>
 
-                <article class="menu-card reveal menu-card--delay-3">
-                    <span class="menu-card__badge menu-card__badge--special">Без алко</span>
-                    <h3 class="menu-card__title">POCHITA'S DREAM</h3>
-                    <p class="menu-card__jp">ポチタの夢</p>
-                    <p class="menu-card__desc">Кавун, грейпфрут, мед, м'ята, газована вода. Те, заради чого варто жити — чи то пес, чи то напій.</p>
-                    <footer class="menu-card__footer">
-                        <p class="menu-card__price">120 <span class="menu-card__price-unit">грн</span></p>
-                        <p class="menu-card__volume">300 мл</p>
-                    </footer>
-                </article>
+                <div class="flip-card reveal menu-card--delay-2">
+                    <div class="flip-card__inner">
+                        <article class="menu-card flip-card__front">
+                            <span class="menu-card__badge menu-card__badge--food">Закуска</span>
+                            <h3 class="menu-card__title">М'ЯСО ХИМЕРИ</h3>
+                            <p class="menu-card__jp">キメラの肉</p>
+                            <p class="menu-card__desc">Гострі м'ясні слайдери зі смаженою цибулею та соусом sriracha. Три штуки — три укуси в саме серце.</p>
+                            <footer class="menu-card__footer">
+                                <p class="menu-card__price">320 <span class="menu-card__price-unit">грн</span></p>
+                                <p class="menu-card__volume">3 шт.</p>
+                            </footer>
+                        </article>
+                        <div class="flip-card__back">
+                            <div class="flip-card__photo-placeholder">
+                                <span class="flip-card__icon">🍽️</span>
+                                <p class="flip-card__coming-soon">ФОТО НЕЗАБАРОМ</p>
+                            </div>
+                            <button class="flip-card__close" aria-label="Повернутись до опису">✕</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="flip-card reveal menu-card--delay-3">
+                    <div class="flip-card__inner">
+                        <article class="menu-card flip-card__front">
+                            <span class="menu-card__badge menu-card__badge--special">Без алко</span>
+                            <h3 class="menu-card__title">POCHITA'S DREAM</h3>
+                            <p class="menu-card__jp">ポチタの夢</p>
+                            <p class="menu-card__desc">Кавун, грейпфрут, мед, м'ята, газована вода. Те, заради чого варто жити — чи то пес, чи то напій.</p>
+                            <footer class="menu-card__footer">
+                                <p class="menu-card__price">120 <span class="menu-card__price-unit">грн</span></p>
+                                <p class="menu-card__volume">300 мл</p>
+                            </footer>
+                        </article>
+                        <div class="flip-card__back">
+                            <div class="flip-card__photo-placeholder">
+                                <span class="flip-card__icon">🍽️</span>
+                                <p class="flip-card__coming-soon">ФОТО НЕЗАБАРОМ</p>
+                            </div>
+                            <button class="flip-card__close" aria-label="Повернутись до опису">✕</button>
+                        </div>
+                    </div>
+                </div>
+
             </div>
         </section>
 

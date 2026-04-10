@@ -42,7 +42,7 @@ export function initNavScroll() {
                     if (active) active.classList.add('is-active');
                 }
             });
-        }, { threshold: 0.35, rootMargin: '-70px 0px -30% 0px' });
+        }, { threshold: 0.25, rootMargin: '-70px 0px -30% 0px' });
         sections.forEach((s) => linkObserver.observe(s));
     }
 }
