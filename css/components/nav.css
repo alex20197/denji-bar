@@ -100,12 +100,92 @@
     background-color: var(--color-blood);
 }
 
+/* ── Burger button ── */
+.nav__burger {
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+    width: 44px;
+    height: 44px;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    flex-shrink: 0;
+}
+
+.nav__burger-line {
+    display: block;
+    width: 24px;
+    height: 2px;
+    background-color: var(--color-white);
+    border-radius: 1px;
+    transform-origin: center;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.nav__burger.is-open .nav__burger-line:nth-child(1) {
+    transform: translateY(7px) rotate(45deg);
+}
+
+.nav__burger.is-open .nav__burger-line:nth-child(2) {
+    opacity: 0;
+}
+
+.nav__burger.is-open .nav__burger-line:nth-child(3) {
+    transform: translateY(-7px) rotate(-45deg);
+}
+
 /* ── Responsive ── */
 @media (max-width: 920px) {
     .nav {
         padding: 1rem 1.5rem;
     }
+
+    .nav__burger {
+        display: flex;
+    }
+
     .nav__list {
+        position: fixed;
+        top: 64px;
+        left: 0;
+        right: 0;
+        flex-direction: column;
+        gap: 0;
+        padding-left: 0;
+        background: rgba(10, 10, 10, 0.98);
+        backdrop-filter: blur(12px);
+        -webkit-backdrop-filter: blur(12px);
+        z-index: var(--z-nav);
+        visibility: hidden;
+        opacity: 0;
+        transform: translateY(-10px);
+        transition: opacity 0.3s ease, transform 0.3s ease, visibility 0.3s;
+    }
+
+    .nav__list.is-open {
+        visibility: visible;
+        opacity: 1;
+        transform: none;
+    }
+
+    .nav__list::before {
         display: none;
+    }
+
+    .nav__link {
+        display: block;
+        padding: 1.2rem 2rem;
+        font-size: 1.1rem;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+    }
+
+    .nav__link:hover,
+    .nav__link:focus-visible {
+        background: rgba(204, 0, 0, 0.08);
+        color: var(--color-fire);
     }
 }

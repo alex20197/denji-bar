@@ -105,8 +105,20 @@
         <a href="#hero" class="nav__logo" aria-label="Denji's Bar — на головну">
             DENJI'<span class="nav__logo-accent">S</span>
         </a>
+        <button
+            class="nav__burger"
+            id="navBurger"
+            type="button"
+            aria-expanded="false"
+            aria-controls="navMenu"
+            aria-label="Відкрити меню"
+        >
+            <span class="nav__burger-line" aria-hidden="true"></span>
+            <span class="nav__burger-line" aria-hidden="true"></span>
+            <span class="nav__burger-line" aria-hidden="true"></span>
+        </button>
         <nav aria-label="Головна навігація">
-            <ul class="nav__list">
+            <ul class="nav__list" id="navMenu">
                 <li><a class="nav__link" href="#about">Про нас</a></li>
                 <li><a class="nav__link" href="#menu">Меню</a></li>
                 <li><a class="nav__link" href="#gallery">Галерея</a></li>
