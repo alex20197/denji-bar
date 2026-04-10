@@ -38,6 +38,7 @@ A production-ready single-page landing site for **Denji's Bar** — an anime-the
 | **Page load fade-in** | `body` starts at `opacity: 0`; `.is-loaded` class added after all modules init |
 | **Chainsaw button vibration** | Hover triggers alternating `.is-vibrating-left` / `.is-vibrating-right` CSS classes (8 steps × 45ms) |
 | **Chainsaw button hide** | `IntersectionObserver` adds `.is-hidden` (opacity 0, pointer-events none) when `#contacts` enters viewport |
+| **Flip cards** | Click on a menu card flips it (rotateY 180°); back face shows a photo placeholder; ✕ button flips back to front |
 | **Ripple effect** | Click on `.footer__social-link` injects `<span class="ripple">`, removed on `animationend` |
 | **Scroll hint fade** | `.hero__scroll-hint` gets `.is-hidden` after 80px scroll |
 | **prefers-reduced-motion** | `base.css` overrides all animation/transition durations to `0.01ms` for sensitive users |
@@ -62,6 +63,7 @@ denji-bar/
 │       ├── hero.css                  # Hero section, speed lines, kanji, buttons, scroll hint
 │       ├── about.css                 # About section, stats, feature card, parallax bg text
 │       ├── menu.css                  # Menu grid, cards, badges with pulsing dot
+│       ├── flip-card.css             # Flip card 3D transform, back face, photo placeholder
 │       ├── gallery.css               # Gallery grid, slide-up hover overlay, item counters
 │       ├── contacts.css              # Contact info, hours grid, map placeholder, scanlines
 │       ├── footer.css                # Footer, sweep animation, neon flicker, ripple
@@ -78,7 +80,8 @@ denji-bar/
 │       ├── count-up.js               # Animate stat numbers 0 → target on viewport entry
 │       ├── parallax.js               # Scroll-driven --parallax-offset for about bg text
 │       ├── scroll-progress.js        # Inject and drive the top scroll-progress bar
-│       └── ripple.js                 # Click ripple on footer social links
+│       ├── ripple.js                 # Click ripple on footer social links
+│       └── flip-card.js              # Click-to-flip menu cards, close button handler
 │
 └── assets/
     ├── images/                       # Add og-cover.jpg for Open Graph / Twitter Card
@@ -293,6 +296,7 @@ State classes use the `is-` prefix and are toggled by JavaScript:
 .is-hidden          → chainsaw button, scroll hint
 .is-vibrating-left  → chainsaw button wobble
 .is-vibrating-right → chainsaw button wobble
+.is-flipped         → flip-card rotated to back face
 ```
 
 ---
@@ -312,6 +316,7 @@ All modules are imported and called from `js/main.js`. Each exports a single `in
 | `parallax.js` | `initParallax()` | `.about` | rAF-throttled scroll: sets `--parallax-offset` on `.about` element based on scroll position (range ±35px) |
 | `scroll-progress.js` | `initScrollProgress()` | `document.body` | Creates and prepends `.scroll-progress` div; passive scroll listener sets `--progress` CSS property |
 | `ripple.js` | `initRipple()` | `.footer__social-link` | Click handler injects `<span class="ripple">` at click coordinates; span removes itself on `animationend` |
+| `flip-card.js` | `initFlipCard()` | `.flip-card`, `.flip-card__front`, `.flip-card__close` | Click on front face → adds `.is-flipped`; click on close button → removes `.is-flipped` with `stopPropagation` |
 
 ---
 
@@ -365,6 +370,13 @@ Features used and their support:
 - `ES Modules` — universal in evergreen browsers (requires `http://`, not `file://`)
 - `backdrop-filter` — Chrome/Edge/Safari; mobile nav works without it (background is solid)
 - `clip-path: inset()` — universal in evergreen browsers
+
+---
+
+## Recent Fixes
+
+- **Scroll jump on page load** — `history.scrollRestoration = 'manual'` + `window.scrollTo(0, 0)` at the top of `init()` before any module is initialized; prevents the browser from restoring a mid-page scroll position on reload
+- **Active nav link not highlighting Menu section** — `IntersectionObserver` threshold in `nav-scroll.js` lowered from `0.35` to `0.25`; rootMargin adjusted to `-70px 0px -30% 0px` so shorter sections still trigger the active state
 
 ---
 

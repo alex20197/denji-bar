@@ -142,6 +142,29 @@ In `index.html`, find `<div class="menu__grid">` and copy this template:
 </article>
 ```
 
+### Flip-card wrapper structure
+
+Every menu card must be wrapped in a `.flip-card` container. Use this full template:
+
+```html
+<div class="flip-card reveal">
+    <div class="flip-card__inner">
+        <article class="menu-card flip-card__front">
+            <!-- card content unchanged -->
+        </article>
+        <div class="flip-card__back">
+            <div class="flip-card__photo-placeholder">
+                <span class="flip-card__icon">🍽️</span>
+                <p class="flip-card__coming-soon">ФОТО НЕЗАБАРОМ</p>
+            </div>
+            <button class="flip-card__close" aria-label="Повернутись до опису">✕</button>
+        </div>
+    </div>
+</div>
+```
+
+When a real photo is available — replace `.flip-card__photo-placeholder` with an `<img>` with a descriptive `alt` attribute.
+
 For staggered reveal timing, add one of these classes to the `<article>`:
 
 ```
@@ -256,6 +279,7 @@ Before every `git commit`, verify:
 - [ ] No `display: none` used where `visibility: hidden + opacity: 0` should be used (to preserve transition animations)
 - [ ] New interactive elements have `aria-label` or visible text label
 - [ ] Decorative-only elements have `aria-hidden="true"`
+- [ ] New menu cards are wrapped in `.flip-card > .flip-card__inner` structure (not bare `<article>`)
 
 ---
 
@@ -285,3 +309,5 @@ Before every `git commit`, verify:
 **`clip-path` blocks overflow.** Elements with `clip-path` will clip child `::before`/`::after` and `position: absolute` children that try to escape the bounds. If a pseudo-element decoration is being clipped, move it outside or use `filter: drop-shadow()` instead of `box-shadow` (which also respects clip-path).
 
 **`transform` and `position: fixed`.** An ancestor with `transform: ...` creates a new stacking context, which breaks `position: fixed` children. Never apply `transform` to a direct ancestor of the chainsaw button or nav.
+
+**`transform-style: preserve-3d` and `overflow: hidden`.** `overflow: hidden` on any ancestor destroys the 3D flip effect on menu cards. Never set `overflow: hidden` on `.menu__grid`, `.flip-card`, or `.flip-card__inner`. If overflow clipping is needed, apply it only to inner elements (`.flip-card__front`, `.flip-card__back`) — they are leaf nodes in the 3D context and are safe to clip.
