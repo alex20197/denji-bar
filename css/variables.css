@@ -1,0 +1,61 @@
+/* === VARIABLES: design tokens === */
+
+:root {
+    /* ── Brand palette ── */
+    --color-blood: #CC0000;
+    --color-dark-blood: #8B0000;
+    --color-fire: #FF6B00;
+    --color-yellow: #FFD700;
+    --color-dark: #0A0A0A;
+    --color-dark-2: #111111;
+    --color-dark-3: #1A1A1A;
+    --color-white: #F0F0F0;
+    --color-grey: #777777;
+
+    /* ── Alpha tones (used in gradients/borders/overlays) ── */
+    --color-blood-rgb: 204, 0, 0;
+    --color-fire-rgb: 255, 107, 0;
+    --color-yellow-rgb: 255, 215, 0;
+    --color-white-rgb: 240, 240, 240;
+    --color-dark-rgb: 10, 10, 10;
+
+    /* ── Typography ── */
+    --font-display: 'Bebas Neue', sans-serif;
+    --font-accent: 'Oswald', sans-serif;
+    --font-body: 'Rajdhani', sans-serif;
+
+    --fz-xs: 0.68rem;
+    --fz-sm: 0.78rem;
+    --fz-md: 0.95rem;
+    --fz-lg: 1.08rem;
+    --fz-xl: 1.45rem;
+
+    /* ── Spacing scale ── */
+    --space-xs: 0.5rem;
+    --space-sm: 1rem;
+    --space-md: 1.5rem;
+    --space-lg: 2.5rem;
+    --space-xl: 5rem;
+    --space-xxl: 8rem;
+
+    /* ── Layout ── */
+    --container-max: 1200px;
+    --section-padding-y: 8rem;
+    --section-padding-x: 3rem;
+
+    /* ── Motion ── */
+    --ease-out: cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    --transition-fast: 0.25s ease;
+    --transition-base: 0.3s ease;
+    --transition-slow: 0.75s ease;
+
+    /* ── Z-index scale ── */
+    --z-nav: 200;
+    --z-floating: 999;
+
+    /* ── Reusable clip-path corners (manga-style cut) ── */
+    --clip-corner-sm: polygon(0 0, calc(100% - 8px) 0, 100% 8px, 100% 100%, 8px 100%, 0 calc(100% - 8px));
+    --clip-corner-md: polygon(0 0, calc(100% - 12px) 0, 100% 12px, 100% 100%, 12px 100%, 0 calc(100% - 12px));
+    --clip-corner-lg: polygon(0 0, calc(100% - 14px) 0, 100% 14px, 100% 100%, 14px 100%, 0 calc(100% - 14px));
+    --clip-corner-xl: polygon(0 0, calc(100% - 20px) 0, 100% 20px, 100% 100%, 20px 100%, 0 calc(100% - 20px));
+}

@@ -1,0 +1,126 @@
+/* === COMPONENT: about === */
+
+.about {
+    padding: var(--section-padding-y) var(--section-padding-x);
+    position: relative;
+    overflow: hidden;
+}
+
+.about::before {
+    content: 'ДЕНЬДЖІ';
+    position: absolute;
+    font-family: var(--font-display);
+    font-size: 18rem;
+    color: rgba(var(--color-blood-rgb), 0.04);
+    top: 50%;
+    left: -3%;
+    transform: translateY(-50%);
+    pointer-events: none;
+    letter-spacing: 8px;
+    white-space: nowrap;
+}
+
+.about__title {
+    font-family: var(--font-display);
+    font-size: clamp(3rem, 5.5vw, 5rem);
+    line-height: 1;
+    letter-spacing: 4px;
+    margin-bottom: 2rem;
+}
+
+.about__title-accent {
+    color: var(--color-blood);
+}
+
+.about__text {
+    font-size: var(--fz-lg);
+    line-height: 1.8;
+    color: rgba(var(--color-white-rgb), 0.8);
+    margin-bottom: 1.4rem;
+    font-weight: 500;
+}
+
+/* ── Stats ── */
+.about__stats {
+    display: flex;
+    gap: 2.5rem;
+    margin-top: 2.5rem;
+}
+
+.about__stat-number {
+    font-family: var(--font-display);
+    font-size: 3.5rem;
+    color: var(--color-yellow);
+    line-height: 1;
+    text-shadow: 0 0 18px rgba(var(--color-yellow-rgb), 0.4);
+}
+
+.about__stat-label {
+    font-family: var(--font-accent);
+    font-size: 0.75rem;
+    letter-spacing: 2px;
+    color: var(--color-grey);
+    text-transform: uppercase;
+}
+
+/* ── Feature card ── */
+.about__card {
+    background-color: var(--color-dark-3);
+    padding: 2.5rem;
+    border: 1px solid rgba(var(--color-blood-rgb), 0.25);
+    position: relative;
+    clip-path: var(--clip-corner-xl);
+}
+
+.about__card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 3px;
+    background: linear-gradient(to right, var(--color-blood), var(--color-fire));
+}
+
+.about__features {
+    display: flex;
+    flex-direction: column;
+}
+
+.about__feature {
+    padding: 0.95rem 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+    font-family: var(--font-accent);
+    font-size: 1rem;
+    letter-spacing: 1px;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.about__feature:last-child {
+    border-bottom: none;
+}
+
+.about__feature::before {
+    content: '▶';
+    color: var(--color-blood);
+    font-size: 0.75rem;
+    flex-shrink: 0;
+}
+
+/* ── Responsive ── */
+@media (max-width: 920px) {
+    .about {
+        padding: 5rem 1.5rem;
+    }
+    .about::before {
+        font-size: 10rem;
+    }
+}
+
+@media (max-width: 580px) {
+    .about__stats {
+        gap: 1.5rem;
+    }
+}

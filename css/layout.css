@@ -1,0 +1,121 @@
+/* === LAYOUT: containers, sections, dividers, scroll-reveal === */
+
+/* ── Section wrapper ── */
+.section {
+    padding: var(--section-padding-y) var(--section-padding-x);
+    position: relative;
+    overflow: hidden;
+}
+
+.section--alt {
+    background-color: var(--color-dark-2);
+}
+
+/* ── Container (max-width wrapper) ── */
+.container {
+    max-width: var(--container-max);
+    margin: 0 auto;
+}
+
+/* ── Two-column grid helper ── */
+.grid-2 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 6rem;
+    align-items: center;
+}
+
+.grid-2--start {
+    align-items: start;
+}
+
+/* ── Section label (small uppercase tag with line) ── */
+.section-label {
+    font-family: var(--font-accent);
+    font-size: var(--fz-sm);
+    letter-spacing: 5px;
+    text-transform: uppercase;
+    color: var(--color-fire);
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 1rem;
+}
+
+.section-label::before {
+    content: '';
+    display: block;
+    width: 28px;
+    height: 2px;
+    background-color: var(--color-fire);
+}
+
+.section-label--center {
+    justify-content: center;
+}
+
+/* ── Section title (large display headline) ── */
+.section-title {
+    font-family: var(--font-display);
+    font-size: clamp(3rem, 7vw, 6rem);
+    letter-spacing: 6px;
+    line-height: 1;
+    margin-bottom: 0.8rem;
+}
+
+.section-title__accent {
+    color: var(--color-blood);
+}
+
+.section-desc {
+    font-size: var(--fz-lg);
+    color: rgba(var(--color-white-rgb), 0.6);
+    font-weight: 500;
+    line-height: 1.7;
+}
+
+/* ── Divider ── */
+.divider {
+    height: 2px;
+    max-width: 420px;
+    margin: 0 auto;
+    background: linear-gradient(to right, transparent, var(--color-blood), transparent);
+}
+
+/* ── Scroll reveal animations ── */
+.reveal,
+.reveal--left,
+.reveal--right {
+    opacity: 0;
+    transition: opacity var(--transition-slow), transform var(--transition-slow);
+}
+
+.reveal {
+    transform: translateY(40px);
+}
+
+.reveal--left {
+    transform: translateX(-50px);
+}
+
+.reveal--right {
+    transform: translateX(50px);
+}
+
+.reveal.is-visible,
+.reveal--left.is-visible,
+.reveal--right.is-visible {
+    opacity: 1;
+    transform: none;
+}
+
+/* ── Responsive ── */
+@media (max-width: 920px) {
+    .section {
+        padding: 5rem 1.5rem;
+    }
+    .grid-2 {
+        grid-template-columns: 1fr;
+        gap: 3rem;
+    }
+}

@@ -1,0 +1,61 @@
+/* === COMPONENT: nav === */
+
+.nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: var(--z-nav);
+    padding: 1.1rem 3rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: linear-gradient(to bottom, rgba(var(--color-dark-rgb), 0.96), transparent);
+    transition: background var(--transition-base), border-bottom var(--transition-base);
+}
+
+.nav.is-scrolled {
+    background: rgba(var(--color-dark-rgb), 0.97);
+    border-bottom: 1px solid rgba(var(--color-blood-rgb), 0.18);
+}
+
+.nav__logo {
+    font-family: var(--font-display);
+    font-size: 2rem;
+    letter-spacing: 4px;
+    color: var(--color-yellow);
+    text-shadow: 0 0 18px rgba(var(--color-fire-rgb), 0.7);
+}
+
+.nav__logo-accent {
+    color: var(--color-blood);
+}
+
+.nav__list {
+    display: flex;
+    gap: 2.2rem;
+}
+
+.nav__link {
+    color: var(--color-white);
+    font-family: var(--font-accent);
+    font-size: 0.85rem;
+    letter-spacing: 2.5px;
+    text-transform: uppercase;
+    transition: color var(--transition-fast);
+}
+
+.nav__link:hover,
+.nav__link:focus-visible {
+    color: var(--color-fire);
+}
+
+/* ── Responsive ── */
+@media (max-width: 920px) {
+    .nav {
+        padding: 1rem 1.5rem;
+    }
+    .nav__list {
+        display: none;
+    }
+}

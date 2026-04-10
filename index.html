@@ -1,0 +1,469 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#0A0A0A">
+    <meta name="robots" content="index, follow">
+
+    <!-- ── SEO ── -->
+    <title>Denji's Bar — манга-бар у Києві | Коктейлі та закуски в стилі Chainsaw Man</title>
+    <meta name="description" content="Denji's Bar — підвальний манга-бар у Києві у стилі «Людина-бензопила». Авторські коктейлі, закуски за мотивами манги, тематичний декор. Відкрито з 17:00.">
+    <meta name="keywords" content="бар Київ, манга бар, Chainsaw Man, Людина-бензопила, авторські коктейлі, аніме бар, тематичний бар">
+    <meta name="author" content="Denji's Bar">
+    <link rel="canonical" href="https://denjisbar.com.ua/">
+
+    <!-- ── Open Graph ── -->
+    <meta property="og:type" content="restaurant">
+    <meta property="og:locale" content="uk_UA">
+    <meta property="og:site_name" content="Denji's Bar">
+    <meta property="og:title" content="Denji's Bar — манга-бар у Києві">
+    <meta property="og:description" content="Підвальний бар у стилі «Людина-бензопила». Авторські коктейлі та закуски в серці Києва.">
+    <meta property="og:url" content="https://denjisbar.com.ua/">
+    <meta property="og:image" content="https://denjisbar.com.ua/assets/images/og-cover.jpg">
+
+    <!-- ── Twitter Card ── -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Denji's Bar — манга-бар у Києві">
+    <meta name="twitter:description" content="Підвальний бар у стилі «Людина-бензопила». Авторські коктейлі в серці Києва.">
+    <meta name="twitter:image" content="https://denjisbar.com.ua/assets/images/og-cover.jpg">
+
+    <!-- ── Favicon (placeholder path) ── -->
+    <link rel="icon" type="image/svg+xml" href="assets/icons/favicon.svg">
+    <link rel="apple-touch-icon" href="assets/icons/apple-touch-icon.png">
+
+    <!-- ── Fonts: preconnect + non-blocking load ── -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Oswald:wght@400;600;700&family=Rajdhani:wght@400;500;600;700&display=swap">
+
+    <!-- ── Stylesheets (order matters: reset → variables → base → layout → components) ── -->
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/variables.css">
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/layout.css">
+    <link rel="stylesheet" href="css/components/nav.css">
+    <link rel="stylesheet" href="css/components/hero.css">
+    <link rel="stylesheet" href="css/components/about.css">
+    <link rel="stylesheet" href="css/components/menu.css">
+    <link rel="stylesheet" href="css/components/gallery.css">
+    <link rel="stylesheet" href="css/components/contacts.css">
+    <link rel="stylesheet" href="css/components/footer.css">
+    <link rel="stylesheet" href="css/components/chainsaw-btn.css">
+
+    <!-- ── Structured data: Bar / Restaurant ── -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "BarOrPub",
+        "name": "Denji's Bar",
+        "description": "Підвальний манга-бар у стилі «Людина-бензопила». Авторські коктейлі та закуски в Києві.",
+        "url": "https://denjisbar.com.ua/",
+        "telephone": "+380441234567",
+        "email": "hello@denjisbar.com.ua",
+        "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "вул. Хрещатик, 15",
+            "addressLocality": "Київ",
+            "addressCountry": "UA"
+        },
+        "servesCuisine": ["Cocktails", "Japanese", "Asian Fusion"],
+        "priceRange": "$$",
+        "openingHoursSpecification": [
+            {
+                "@type": "OpeningHoursSpecification",
+                "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday"],
+                "opens": "17:00",
+                "closes": "02:00"
+            },
+            {
+                "@type": "OpeningHoursSpecification",
+                "dayOfWeek": "Friday",
+                "opens": "17:00",
+                "closes": "04:00"
+            },
+            {
+                "@type": "OpeningHoursSpecification",
+                "dayOfWeek": "Saturday",
+                "opens": "15:00",
+                "closes": "05:00"
+            },
+            {
+                "@type": "OpeningHoursSpecification",
+                "dayOfWeek": "Sunday",
+                "opens": "15:00",
+                "closes": "02:00"
+            }
+        ]
+    }
+    </script>
+</head>
+<body>
+
+    <!-- ════════════════ HEADER / NAV ════════════════ -->
+    <header class="nav" id="nav" role="banner">
+        <a href="#hero" class="nav__logo" aria-label="Denji's Bar — на головну">
+            DENJI'<span class="nav__logo-accent">S</span>
+        </a>
+        <nav aria-label="Головна навігація">
+            <ul class="nav__list">
+                <li><a class="nav__link" href="#about">Про нас</a></li>
+                <li><a class="nav__link" href="#menu">Меню</a></li>
+                <li><a class="nav__link" href="#gallery">Галерея</a></li>
+                <li><a class="nav__link" href="#contacts">Контакти</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main id="main">
+
+        <!-- ════════════════ HERO ════════════════ -->
+        <section class="hero" id="hero" aria-label="Головний екран">
+            <div class="hero__bg" aria-hidden="true"></div>
+            <div class="hero__speed-lines" aria-hidden="true"></div>
+            <div class="hero__kanji" aria-hidden="true">血鬼悪魔</div>
+            <div class="hero__panel hero__panel--top-right" aria-hidden="true">
+                <span class="hero__panel-text">POWER!!!</span>
+            </div>
+            <div class="hero__panel hero__panel--bottom-left" aria-hidden="true">
+                <span class="hero__panel-text">GO TO HELL</span>
+            </div>
+
+            <div class="hero__content">
+                <p class="hero__tag">Київ · підвальний бар · 18+</p>
+                <h1 class="hero__title">
+                    <span class="hero__title-line hero__title-line--red">DENJI'S</span>
+                    <span class="hero__title-line hero__title-line--gold">BAR</span>
+                </h1>
+                <p class="hero__slogan">
+                    Де кров — це <strong>коктейль</strong>,<br>
+                    а демони — постійні гості
+                </p>
+                <div class="hero__cta">
+                    <a href="#menu" class="btn btn--primary">Переглянути меню</a>
+                    <a href="#contacts" class="btn btn--outline">Знайти нас</a>
+                </div>
+            </div>
+
+            <div class="hero__scroll-hint" aria-hidden="true">
+                <span class="hero__scroll-text">Scroll</span>
+                <div class="hero__scroll-line"></div>
+            </div>
+        </section>
+
+        <!-- ════════════════ ABOUT ════════════════ -->
+        <section class="section about" id="about" aria-labelledby="about-title">
+            <div class="container grid-2">
+                <div class="reveal--left">
+                    <p class="section-label">Про заклад</p>
+                    <h2 class="about__title" id="about-title">
+                        МІСЦЕ, ДЕ<br>
+                        <span class="about__title-accent">ЖИВУТЬ</span><br>
+                        ДЕМОНИ
+                    </h2>
+                    <p class="about__text">
+                        Denji's Bar — це підвальний бар у серці Києва, де естетика легендарної манги «Людина-бензопила» зустрічається з культурою авторських коктейлів. Ми заховані під землею — так само, як і наш натхненник ховався від своєї демонічної природи.
+                    </p>
+                    <p class="about__text">
+                        Стіни вкриті оригінальними принтами манги, вінілові фігурки пильнують з полиць, а декор із справжніх бензопил і символів Дияволів нагадує про найкрутіші битви. Тут кожен куток — це окрема глава.
+                    </p>
+                    <p class="about__text">
+                        Акцент — на барній культурі. Авторські коктейлі за іменами персонажів, закуски з лунбоксу Деньджі, м'ясні тарілки від «найсильнішого демона» Павер — все це тут.
+                    </p>
+                    <dl class="about__stats">
+                        <div>
+                            <dt class="about__stat-number">40+</dt>
+                            <dd class="about__stat-label">Коктейлів</dd>
+                        </div>
+                        <div>
+                            <dt class="about__stat-number">2</dt>
+                            <dd class="about__stat-label">Зали</dd>
+                        </div>
+                        <div>
+                            <dt class="about__stat-number">18+</dt>
+                            <dd class="about__stat-label">Вхід</dd>
+                        </div>
+                    </dl>
+                </div>
+
+                <div class="reveal--right">
+                    <article class="about__card">
+                        <ul class="about__features">
+                            <li class="about__feature">Авторські коктейлі за мотивами персонажів</li>
+                            <li class="about__feature">Вінілові фігурки та мангові принти в кожному кутку</li>
+                            <li class="about__feature">Декор: справжні бензопили та символи Дияволів</li>
+                            <li class="about__feature">Закуски з меню Деньджі — рибні котлети, тамаго</li>
+                            <li class="about__feature">Тематичні вечірки та показ аніме-серій</li>
+                            <li class="about__feature">Живий звук щоп'ятниці та щосуботи</li>
+                            <li class="about__feature">Місця для компаній до 15 осіб</li>
+                        </ul>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <div class="divider" role="separator" aria-hidden="true"></div>
+
+        <!-- ════════════════ MENU ════════════════ -->
+        <section class="section section--alt menu" id="menu" aria-labelledby="menu-title">
+            <header class="menu__header reveal">
+                <p class="section-label section-label--center">Наше меню</p>
+                <h2 class="section-title" id="menu-title">
+                    КРОВ'ЯНА <span class="section-title__accent">КАРТА</span>
+                </h2>
+                <p class="section-desc">Кожна позиція — це персонаж. Кожен ковток — це глава манги.</p>
+            </header>
+
+            <div class="menu__grid">
+                <article class="menu-card reveal">
+                    <span class="menu-card__badge menu-card__badge--cocktail">Коктейль</span>
+                    <h3 class="menu-card__title">CHAINSAW BLOOD</h3>
+                    <p class="menu-card__jp">チェンソーブラッド</p>
+                    <p class="menu-card__desc">Апероль, кров'яний апельсин, гренадин, горілка преміум, лід у формі серця. Злегка гірко — як усі рішення Деньджі.</p>
+                    <footer class="menu-card__footer">
+                        <p class="menu-card__price">180 <span class="menu-card__price-unit">грн</span></p>
+                        <p class="menu-card__volume">200 мл</p>
+                    </footer>
+                </article>
+
+                <article class="menu-card reveal menu-card--delay-1">
+                    <span class="menu-card__badge menu-card__badge--special">Сігнатур</span>
+                    <h3 class="menu-card__title">POWER'S RUSH</h3>
+                    <p class="menu-card__jp">パワーズラッシュ</p>
+                    <p class="menu-card__desc">Джин, блакитний кюрасао, лимонний сік, малиновий сироп, тонік, малина. Хаотичний та яскравий — як сама Павер.</p>
+                    <footer class="menu-card__footer">
+                        <p class="menu-card__price">210 <span class="menu-card__price-unit">грн</span></p>
+                        <p class="menu-card__volume">220 мл</p>
+                    </footer>
+                </article>
+
+                <article class="menu-card reveal menu-card--delay-2">
+                    <span class="menu-card__badge menu-card__badge--cocktail">Коктейль</span>
+                    <h3 class="menu-card__title">MAKIMA'S CONTROL</h3>
+                    <p class="menu-card__jp">マキマのコントロール</p>
+                    <p class="menu-card__desc">Саке, личі, трояндова вода, соляний обідок, суха крига. Виглядає м'яко — б'є без попередження.</p>
+                    <footer class="menu-card__footer">
+                        <p class="menu-card__price">240 <span class="menu-card__price-unit">грн</span></p>
+                        <p class="menu-card__volume">180 мл</p>
+                    </footer>
+                </article>
+
+                <article class="menu-card reveal menu-card--delay-1">
+                    <span class="menu-card__badge menu-card__badge--food">Закуска</span>
+                    <h3 class="menu-card__title">ДЕНЬДЖІ БЕНТОУ</h3>
+                    <p class="menu-card__jp">デンジの弁当</p>
+                    <p class="menu-card__desc">Рибні котлети в паніровці, онігірі з лососем, маринований огірок, соус теріякі. Скромно та по-домашньому.</p>
+                    <footer class="menu-card__footer">
+                        <p class="menu-card__price">290 <span class="menu-card__price-unit">грн</span></p>
+                        <p class="menu-card__volume">Порція</p>
+                    </footer>
+                </article>
+
+                <article class="menu-card reveal menu-card--delay-2">
+                    <span class="menu-card__badge menu-card__badge--food">Закуска</span>
+                    <h3 class="menu-card__title">М'ЯСО ХИМЕРИ</h3>
+                    <p class="menu-card__jp">キメラの肉</p>
+                    <p class="menu-card__desc">Гострі м'ясні слайдери зі смаженою цибулею та соусом sriracha. Три штуки — три укуси в саме серце.</p>
+                    <footer class="menu-card__footer">
+                        <p class="menu-card__price">320 <span class="menu-card__price-unit">грн</span></p>
+                        <p class="menu-card__volume">3 шт.</p>
+                    </footer>
+                </article>
+
+                <article class="menu-card reveal menu-card--delay-3">
+                    <span class="menu-card__badge menu-card__badge--special">Без алко</span>
+                    <h3 class="menu-card__title">POCHITA'S DREAM</h3>
+                    <p class="menu-card__jp">ポチタの夢</p>
+                    <p class="menu-card__desc">Кавун, грейпфрут, мед, м'ята, газована вода. Те, заради чого варто жити — чи то пес, чи то напій.</p>
+                    <footer class="menu-card__footer">
+                        <p class="menu-card__price">120 <span class="menu-card__price-unit">грн</span></p>
+                        <p class="menu-card__volume">300 мл</p>
+                    </footer>
+                </article>
+            </div>
+        </section>
+
+        <div class="divider" role="separator" aria-hidden="true"></div>
+
+        <!-- ════════════════ GALLERY ════════════════ -->
+        <section class="section gallery" id="gallery" aria-labelledby="gallery-title">
+            <header class="gallery__header reveal">
+                <p class="section-label section-label--center">Атмосфера</p>
+                <h2 class="section-title" id="gallery-title">
+                    НАШІ <span class="section-title__accent">КАДРИ</span>
+                </h2>
+            </header>
+
+            <div class="gallery__grid">
+                <a href="#contacts" class="gallery__item gallery__item--feature reveal--left" aria-label="Інтер'єр бару — мангові стіни, фігурки, неон">
+                    <div class="gallery__block gallery__block--blood">
+                        <span class="gallery__icon" aria-hidden="true">⛓️</span>
+                        <span class="gallery__label">ІНТЕР'ЄР БАРУ</span>
+                        <span class="gallery__sub">Мангові стіни · Фігурки · Неон</span>
+                    </div>
+                    <div class="gallery__overlay" aria-hidden="true">
+                        <span class="gallery__overlay-text">ПЕРЕГЛЯНУТИ →</span>
+                    </div>
+                </a>
+
+                <a href="#menu" class="gallery__item reveal" aria-label="Авторські коктейлі">
+                    <div class="gallery__block gallery__block--fire">
+                        <span class="gallery__icon" aria-hidden="true">🍸</span>
+                        <span class="gallery__label">КОКТЕЙЛІ</span>
+                        <span class="gallery__sub">Авторські рецептури</span>
+                    </div>
+                    <div class="gallery__overlay" aria-hidden="true">
+                        <span class="gallery__overlay-text">ПЕРЕГЛЯНУТИ →</span>
+                    </div>
+                </a>
+
+                <a href="#about" class="gallery__item reveal gallery__item--delay-1" aria-label="Декор: бензопили та символи дияволів">
+                    <div class="gallery__block gallery__block--midnight">
+                        <span class="gallery__icon" aria-hidden="true">🎌</span>
+                        <span class="gallery__label">ДЕКОР</span>
+                        <span class="gallery__sub">Бензопили · Символи</span>
+                    </div>
+                    <div class="gallery__overlay" aria-hidden="true">
+                        <span class="gallery__overlay-text">ПЕРЕГЛЯНУТИ →</span>
+                    </div>
+                </a>
+
+                <a href="#contacts" class="gallery__item reveal--right gallery__item--delay-2" aria-label="Тематичні вечірки та живий звук">
+                    <div class="gallery__block gallery__block--gold">
+                        <span class="gallery__icon" aria-hidden="true">🌙</span>
+                        <span class="gallery__label">ВЕЧІРКИ</span>
+                        <span class="gallery__sub">Аніме-ночі · Живий звук</span>
+                    </div>
+                    <div class="gallery__overlay" aria-hidden="true">
+                        <span class="gallery__overlay-text">ПЕРЕГЛЯНУТИ →</span>
+                    </div>
+                </a>
+            </div>
+        </section>
+
+        <!-- ════════════════ CONTACTS ════════════════ -->
+        <section class="section section--alt contacts" id="contacts" aria-labelledby="contacts-title">
+            <div class="container grid-2 grid-2--start">
+                <div class="reveal--left">
+                    <p class="section-label">Як нас знайти</p>
+                    <h2 class="contacts__title" id="contacts-title">
+                        ЗНАЙДИ<br>
+                        <span class="contacts__title-accent">НАС</span><br>
+                        В ТЕМРЯВІ
+                    </h2>
+
+                    <address>
+                        <div class="contact-info">
+                            <div class="contact-info__icon" aria-hidden="true">📍</div>
+                            <div>
+                                <p class="contact-info__label">Адреса</p>
+                                <p class="contact-info__value">вул. Хрещатик, 15, підвальний поверх<br>Київ, Україна</p>
+                            </div>
+                        </div>
+                        <div class="contact-info">
+                            <div class="contact-info__icon" aria-hidden="true">📞</div>
+                            <div>
+                                <p class="contact-info__label">Телефон</p>
+                                <p class="contact-info__value">
+                                    <a href="tel:+380441234567">+38 (044) 123-45-67</a><br>
+                                    <a href="tel:+380679876543">+38 (067) 987-65-43</a>
+                                </p>
+                            </div>
+                        </div>
+                        <div class="contact-info">
+                            <div class="contact-info__icon" aria-hidden="true">✉️</div>
+                            <div>
+                                <p class="contact-info__label">Email</p>
+                                <p class="contact-info__value">
+                                    <a href="mailto:hello@denjisbar.com.ua">hello@denjisbar.com.ua</a>
+                                </p>
+                            </div>
+                        </div>
+                    </address>
+
+                    <div class="hours" aria-label="Графік роботи">
+                        <div class="hours__row">
+                            <span class="hours__day">Пн — Чт</span>
+                            <span class="hours__time">17:00 — 02:00</span>
+                        </div>
+                        <div class="hours__row">
+                            <span class="hours__day">Пт</span>
+                            <span class="hours__time">17:00 — 04:00</span>
+                        </div>
+                        <div class="hours__row">
+                            <span class="hours__day">Сб</span>
+                            <span class="hours__time">15:00 — 05:00</span>
+                        </div>
+                        <div class="hours__row">
+                            <span class="hours__day">Нд</span>
+                            <span class="hours__time">15:00 — 02:00</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="reveal--right">
+                    <div class="map" role="img" aria-label="Карта-заглушка: вул. Хрещатик, 15, Київ">
+                        <div class="map__grid" aria-hidden="true"></div>
+                        <div class="map__ring" aria-hidden="true"></div>
+                        <div class="map__ring" aria-hidden="true"></div>
+                        <div class="map__ring" aria-hidden="true"></div>
+                        <div class="map__center">
+                            <span class="map__pin" aria-hidden="true">📌</span>
+                            <p class="map__address">ВУЛ. ХРЕЩАТИК, 15</p>
+                            <p class="map__city">Київ · Підвал · Орієнтир: бензопила біля входу</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- ════════════════ FOOTER ════════════════ -->
+    <footer class="footer" role="contentinfo">
+        <p class="footer__logo">DENJI'<span class="footer__logo-accent">S</span> BAR</p>
+        <p class="footer__tagline">Київ · Manga Bar · 18+ · Since 2024</p>
+        <ul class="footer__social" aria-label="Соціальні мережі">
+            <li><a href="https://facebook.com/" class="footer__social-link" aria-label="Facebook" rel="noopener" target="_blank">f</a></li>
+            <li><a href="https://instagram.com/" class="footer__social-link" aria-label="Instagram" rel="noopener" target="_blank">ig</a></li>
+            <li><a href="https://tiktok.com/" class="footer__social-link" aria-label="TikTok" rel="noopener" target="_blank">tt</a></li>
+            <li><a href="https://youtube.com/" class="footer__social-link" aria-label="YouTube" rel="noopener" target="_blank">▶</a></li>
+        </ul>
+        <p class="footer__copy">© 2025 Denji's Bar. Всі права захищені. Надмірне вживання алкоголю шкодить вашому здоров'ю.</p>
+    </footer>
+
+    <!-- ════════════════ FLOATING CHAINSAW BUTTON ════════════════ -->
+    <a href="#contacts" class="chainsaw-btn" id="chainsawBtn" aria-label="Зв'язатись з нами">
+        <span class="chainsaw-btn__tip" aria-hidden="true">ЗАТЕЛЕФОНУВАТИ НАМ</span>
+
+        <span class="chainsaw-btn__engine">
+            <span class="chainsaw-btn__stripe" aria-hidden="true"></span>
+            <span class="chainsaw-btn__label">Зв'язатись</span>
+        </span>
+
+        <span class="chainsaw-btn__saw-wrap" aria-hidden="true">
+            <span class="chainsaw-btn__saw">
+                <span class="chainsaw-btn__blade-row">
+                    <span class="chainsaw-btn__blade-body"></span>
+                    <span class="chainsaw-btn__blade-tip"></span>
+                </span>
+                <span class="chainsaw-btn__chain-track">
+                    <span class="chainsaw-btn__chain-scroll">
+                        <!-- Repeat teeth to fill the track and loop seamlessly -->
+                        <span class="chainsaw-btn__tooth"></span><span class="chainsaw-btn__tooth"></span><span class="chainsaw-btn__tooth"></span>
+                        <span class="chainsaw-btn__tooth"></span><span class="chainsaw-btn__tooth"></span><span class="chainsaw-btn__tooth"></span>
+                        <span class="chainsaw-btn__tooth"></span><span class="chainsaw-btn__tooth"></span><span class="chainsaw-btn__tooth"></span>
+                        <span class="chainsaw-btn__tooth"></span><span class="chainsaw-btn__tooth"></span><span class="chainsaw-btn__tooth"></span>
+                        <span class="chainsaw-btn__tooth"></span><span class="chainsaw-btn__tooth"></span><span class="chainsaw-btn__tooth"></span>
+                        <span class="chainsaw-btn__tooth"></span><span class="chainsaw-btn__tooth"></span><span class="chainsaw-btn__tooth"></span>
+                    </span>
+                </span>
+            </span>
+            <span class="chainsaw-btn__blood"></span>
+        </span>
+    </a>
+
+    <!-- ════════════════ JS ════════════════ -->
+    <script type="module" src="js/main.js"></script>
+</body>
+</html>

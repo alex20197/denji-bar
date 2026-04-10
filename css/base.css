@@ -1,0 +1,58 @@
+/* === BASE: typography, body, global behavior === */
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: var(--color-dark);
+    color: var(--color-white);
+    font-family: var(--font-body);
+    font-weight: 500;
+    line-height: 1.5;
+    overflow-x: hidden;
+}
+
+/* ── Headings inherit display font when needed ── */
+h1, h2, h3 {
+    font-family: var(--font-display);
+    letter-spacing: 4px;
+    line-height: 1;
+}
+
+/* ── Focus visible for keyboard accessibility ── */
+:focus-visible {
+    outline: 2px solid var(--color-fire);
+    outline-offset: 3px;
+}
+
+/* ── Selection ── */
+::selection {
+    background-color: var(--color-blood);
+    color: var(--color-white);
+}
+
+/* ── Reduced motion ── */
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+    }
+}
+
+/* ── Visually hidden (a11y helper) ── */
+.visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
+}
