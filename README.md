@@ -1,5 +1,18 @@
 # Denji's Bar — Landing Page
 
+![HTML5](https://img.shields.io/badge/HTML5-semantic-cc0000?style=flat-square&logo=html5)
+![CSS3](https://img.shields.io/badge/CSS3-modular-ff6b00?style=flat-square&logo=css3)
+![JavaScript](https://img.shields.io/badge/JS-ES%20Modules-ffd700?style=flat-square&logo=javascript)
+![Deploy](https://img.shields.io/badge/Deploy-GitHub%20Pages-0a0a0a?style=flat-square&logo=github)
+
+## Live Demo
+
+**[alex20197.github.io/denji-bar](https://alex20197.github.io/denji-bar/)**
+
+> Part of my frontend portfolio. View more projects at [github.com/alex20197](https://github.com/alex20197)
+
+---
+
 A production-ready landing page for **Denji's Bar**, an anime-themed (Chainsaw Man inspired) cocktail bar located in Kyiv, Ukraine. Built with vanilla HTML5, CSS3, and modern JavaScript modules — no frameworks, no build step required.
 
 ---
