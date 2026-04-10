@@ -31,11 +31,35 @@
     color: var(--color-blood);
 }
 
+@keyframes logo-pulse {
+    0%, 100% { text-shadow: 0 0 18px rgba(var(--color-fire-rgb), 0.7); }
+    50%       { text-shadow: 0 0 30px rgba(var(--color-fire-rgb), 1), 0 0 60px rgba(var(--color-blood-rgb), 0.45); }
+}
+
+.nav.is-scrolled .nav__logo {
+    animation: logo-pulse 3s ease-in-out infinite;
+}
+
+/* ── Red vertical divider before nav links ── */
 .nav__list {
     display: flex;
     gap: 2.2rem;
+    position: relative;
+    padding-left: 1.4rem;
 }
 
+.nav__list::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 1px;
+    height: 18px;
+    background: rgba(var(--color-blood-rgb), 0.55);
+}
+
+/* ── Nav links with animated underline ── */
 .nav__link {
     color: var(--color-white);
     font-family: var(--font-accent);
@@ -43,11 +67,37 @@
     letter-spacing: 2.5px;
     text-transform: uppercase;
     transition: color var(--transition-fast);
+    position: relative;
+}
+
+.nav__link::after {
+    content: '';
+    position: absolute;
+    bottom: -3px;
+    left: 0;
+    width: 0;
+    height: 1px;
+    background-color: var(--color-fire);
+    transition: width 0.3s ease;
 }
 
 .nav__link:hover,
 .nav__link:focus-visible {
     color: var(--color-fire);
+}
+
+.nav__link:hover::after,
+.nav__link:focus-visible::after {
+    width: 100%;
+}
+
+.nav__link.is-active {
+    color: var(--color-fire);
+}
+
+.nav__link.is-active::after {
+    width: 100%;
+    background-color: var(--color-blood);
 }
 
 /* ── Responsive ── */

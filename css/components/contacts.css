@@ -31,6 +31,12 @@
     justify-content: center;
     font-size: 1.25rem;
     clip-path: var(--clip-corner-sm);
+    transition: background-color var(--transition-base), filter var(--transition-base);
+}
+
+.contact-info:hover .contact-info__icon {
+    background-color: rgba(var(--color-blood-rgb), 0.28);
+    filter: drop-shadow(0 0 6px rgba(var(--color-blood-rgb), 0.65));
 }
 
 .contact-info__label {
@@ -60,13 +66,20 @@
     justify-content: space-between;
     padding: 0.85rem 1.4rem;
     border-bottom: 1px solid rgba(255, 255, 255, 0.04);
+    border-left: 2px solid transparent;
     font-family: var(--font-accent);
     font-size: 0.98rem;
     letter-spacing: 1px;
+    transition: border-left-color var(--transition-fast), background-color var(--transition-fast);
 }
 
 .hours__row:last-child {
     border-bottom: none;
+}
+
+.hours__row:hover {
+    border-left-color: var(--color-blood);
+    background-color: rgba(var(--color-blood-rgb), 0.05);
 }
 
 .hours__day {
@@ -150,9 +163,48 @@
     text-transform: uppercase;
 }
 
+/* ── Scanline overlay on map ── */
+.map::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    z-index: 3;
+    pointer-events: none;
+    background: repeating-linear-gradient(
+        0deg,
+        transparent,
+        transparent 3px,
+        rgba(0, 0, 0, 0.07) 3px,
+        rgba(0, 0, 0, 0.07) 4px
+    );
+}
+
+/* ── Decorative "FIND US" vertical text ── */
+.contacts {
+    overflow: visible;
+}
+
+.contacts::after {
+    content: 'FIND US';
+    position: absolute;
+    right: 1rem;
+    top: 50%;
+    transform: translateY(-50%) rotate(90deg);
+    transform-origin: center center;
+    font-family: var(--font-display);
+    font-size: 2.8rem;
+    letter-spacing: 10px;
+    color: rgba(var(--color-blood-rgb), 0.07);
+    pointer-events: none;
+    white-space: nowrap;
+}
+
 /* ── Responsive ── */
 @media (max-width: 920px) {
     .map {
         min-height: 360px;
+    }
+    .contacts::after {
+        display: none;
     }
 }
